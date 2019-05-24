@@ -19,9 +19,10 @@ public class solution {
 
         String result = kangaroo(x1, v1, x2, v2);
         System.out.println(result);
+		System.out.println("They will meet after "+jumpCounter+" jumps!");
 
     }
-
+    static int jumpCounter=0;
 	private static String kangaroo(int x1, int v1, int x2, int v2) {
 		int k1=0,k2=0;
 		String result="N";
@@ -39,7 +40,7 @@ public class solution {
 				result="YES";
 				break;
 			}
-			
+			jumpCounter++;
 			k1 = k1 + v1;
 			k2 = k2 + v2;
 		}
